@@ -26,4 +26,5 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+# DATABASE
 DATABASES = {"default": dj_database_url.config(default=config("DATABASE_URL"))}
