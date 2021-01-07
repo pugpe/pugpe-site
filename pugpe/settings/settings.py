@@ -31,10 +31,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-DEV_APPS = [
-    "test_without_migrations",
-]
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
