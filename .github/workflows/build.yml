@@ -26,11 +26,6 @@ jobs:
       - name: Install DEV dependencies (for testing)
         run: pip install -r requirements-dev.txt
 
-      - name: Add envs
-        env:
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
-        run: echo 'Envs added'
-
       - name: Style check
         run: prospector --messages-only
 
@@ -41,7 +36,11 @@ jobs:
         run: bandit -x ./.venv -r .
 
       - name: Update database schema
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}  # TODO: Usar .env
         run: python manage.py migrate
 
       - name: Tests check
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}  # TODO: Usar .env
         run: python manage.py test
