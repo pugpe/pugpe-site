@@ -6,6 +6,9 @@ from decouple import config
 from .base import *  # noqa
 
 
+INSTALLED_APPS = [app for app in INSTALLED_APPS if app not in DEV_APPS]
+
+
 DEBUG = False
 
 DATABASES = {
