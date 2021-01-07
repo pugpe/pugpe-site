@@ -8,6 +8,7 @@ from .base import *  # noqa
 
 INSTALLED_APPS = [app for app in INSTALLED_APPS if app not in DEV_APPS]
 
+ALLOWED_HOSTS = ["*"]
 
 DEBUG = False
 
