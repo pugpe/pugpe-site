@@ -38,4 +38,4 @@ jobs:
       - name: Tests check
         env:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
-        run: python manage.py test
+        run: python manage.py test -n
