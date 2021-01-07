@@ -11,6 +11,9 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pugpe.settings")
+DJANGO_ENV = os.environ.get("DJANGO_ENV", "develop")
+
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pugpe.settings." + DJANGO_ENV)
 
 application = get_wsgi_application()

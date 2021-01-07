@@ -4,9 +4,12 @@ import os
 import sys
 
 
+DJANGO_ENV = os.environ.get("DJANGO_ENV", "develop")
+
+
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pugpe.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pugpe.settings." + DJANGO_ENV)
     try:
         from django.core.management import execute_from_command_line  # noqa
     except ImportError as exc:
