@@ -29,6 +29,7 @@ jobs:
       - name: Add envs
         env:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        run: echo 'Envs added'
 
       - name: Style check
         run: prospector --messages-only
