@@ -35,7 +35,10 @@ jobs:
       - name: Security check
         run: bandit -x ./.venv -r .
 
+      - name: Update database schema
+        run: python manage.py migrate
+
       - name: Tests check
         env:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
-        run: python manage.py test -n
+        run: python manage.py test
