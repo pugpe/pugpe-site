@@ -36,4 +36,6 @@ jobs:
         run: bandit -x ./.venv -r .
 
       - name: Tests check
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: python manage.py test
