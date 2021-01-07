@@ -1,0 +1,5 @@
+asgiref==3.3.1; python_version >= "3.6"
+django==3.1.5; python_version >= "3.6"
+python-decouple==3.4
+pytz==2020.5; python_version >= "3.6"
+sqlparse==0.4.1; python_version >= "3.6"
