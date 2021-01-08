@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  deploy_dev:
+  deploy_prod:
     runs-on: ubuntu-18.04
     environment:
       name: production
