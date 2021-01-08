@@ -1,4 +1,4 @@
-name: Build workflow
+name: Dev's deploy pipeline
 
 on:
   push:
