@@ -1,10 +1,8 @@
-name: Build workflow
+name: Build pipeline
 
 on:
-  push:
-    branches: [main]
   pull_request:
-    branches: [main]
+    branches: [main, develop]
 
 jobs:
   build:
