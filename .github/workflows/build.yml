@@ -33,12 +33,15 @@ jobs:
       - name: Security check
         run: bandit -x ./.venv -r .
 
+      - name: Check missing migrations
+        run: python manage.py makemigrations --check --dry-run
+
       - name: Update database schema
         env:
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}  # TODO: Usar .env
+          SECRET_KEY: ${{ secrets.SECRET_KEY }} # TODO: Usar .env
         run: python manage.py migrate
 
       - name: Tests check
         env:
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}  # TODO: Usar .env
+          SECRET_KEY: ${{ secrets.SECRET_KEY }} # TODO: Usar .env
         run: python manage.py test
