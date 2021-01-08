@@ -526,11 +526,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-<<<<<<< HEAD
 content-hash = "96c82ae581a0b539fda23652e251c53f6fbd81c3b8ee9ffb09427e10c8816da9"
-=======
-content-hash = "ab074f3a6a9e6cb223fd6085e1ae5a1d24c3fe01f7480c30feff9e4aeeb5249f"
->>>>>>> 139a1f5... Refatora aplicação para deploy no heroku
 
 [metadata.files]
 appdirs = [
