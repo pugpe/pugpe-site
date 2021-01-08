@@ -1,0 +1,20 @@
+name: Deploy pipeline [DEVELOP]
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  deploy_dev:
+    runs-on: ubuntu-18.04
+    environment:
+      name: develop
+      url: "https://pugpe-site-dev.herokuapp.com/"
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.8.8
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
+          branch: main
