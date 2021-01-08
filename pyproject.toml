@@ -11,7 +11,10 @@ gunicorn = "^20.0.4"
 python = "^3.9"
 python-decouple = "^3.4"
 whitenoise = "^5.2.0"
+<<<<<<< HEAD
 psycopg2 = "^2.8.6"
+=======
+>>>>>>> 139a1f5... Refatora aplicação para deploy no heroku
 
 [tool.poetry.dev-dependencies]
 bandit = "^1.7.0"
