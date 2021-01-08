@@ -10,7 +10,6 @@ jobs:
     environment:
       name: develop
       url: "https://temp-pugpe-site-dev.herokuapp.com/"
-    needs: build
     steps:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.8.8
