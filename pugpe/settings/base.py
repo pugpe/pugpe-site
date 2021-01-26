@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     # Project's Apps
     "common",
     "users",
-    "events",
+    "meetings",
+    "profiles",
 ]
 
 MIDDLEWARE = [
