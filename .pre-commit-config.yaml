@@ -38,5 +38,5 @@ repos:
         entry: prospector --messages-only
         language: python
         types: [python]
-        exclude: .+/(settings|migrations)/.+u
+        exclude: .+/(settings|migrations)/.+
         pass_filenames: true
