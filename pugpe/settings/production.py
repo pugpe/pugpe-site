@@ -12,13 +12,12 @@ ALLOWED_HOSTS = ["*"]  # TODO: Colocar hosts em variavel de ambiente
 
 DEBUG = False
 
-# TODO: Ajustar configurações para PostgreSQL
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    "default": dj_database_url.config(
+        default="sqlite:///{0}".format(os.path.join(BASE_DIR, "pugpe_site.sqlite3")),
+    )
 }
+
 
 # STATICS
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")

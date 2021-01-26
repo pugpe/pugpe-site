@@ -6,7 +6,7 @@ from common.models import TimeStampedModel
 from .event_helpers import check_required_fields_for_a_valid_event
 
 
-class Event(TimeStampedModel):
+class Meeting(TimeStampedModel):
 
     title = models.CharField(_("title"), max_length=255)
     description = models.TextField(_("description"), blank=True)
