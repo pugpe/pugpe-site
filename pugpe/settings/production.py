@@ -8,10 +8,11 @@ from .base import *  # noqa
 
 INSTALLED_APPS = [app for app in INSTALLED_APPS if app not in DEV_APPS]
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"]  # TODO: Colocar hosts em variavel de ambiente
 
 DEBUG = False
 
+# TODO: Ajustar configurações para PostgreSQL
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
