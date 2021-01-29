@@ -11,6 +11,7 @@ colorama==0.4.4; python_version >= "3.7" and python_full_version < "3.0.0" and p
 decorator==4.4.2; python_version >= "3.7" and python_full_version < "3.0.0" or python_full_version >= "3.2.0" and python_version >= "3.7"
 distlib==0.3.1; python_full_version >= "3.6.1"
 dj-database-url==0.5.0
+django-debug-toolbar==3.2; python_version >= "3.6"
 django-test-without-migrations==0.6
 django==3.1.5; python_version >= "3.6"
 dodgy==0.2.1
