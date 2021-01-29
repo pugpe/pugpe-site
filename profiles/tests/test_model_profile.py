@@ -46,7 +46,8 @@ class ProfileModelTest(TestCase):
         }
         profile = Profile.objects.create(**profile_data)
 
-        self.assertEqual("Meu Completo", str(profile))
+        expected_result = "Meu Completo" + " - " + profile.user.email
+        self.assertEqual(expected_result, str(profile))
 
     def test_profile_str_with_two_names(self):
         profile_data = {
@@ -55,7 +56,8 @@ class ProfileModelTest(TestCase):
         }
         profile = Profile.objects.create(**profile_data)
 
-        self.assertEqual("Meu Completo", str(profile))
+        expected_result = "Meu Completo" + " - " + profile.user.email
+        self.assertEqual(expected_result, str(profile))
 
     def test_profile_str_with_one_name(self):
         profile_data = {
@@ -64,7 +66,8 @@ class ProfileModelTest(TestCase):
         }
         profile = Profile.objects.create(**profile_data)
 
-        self.assertEqual("Meu", str(profile))
+        expected_result = "Meu" + " - " + profile.user.email
+        self.assertEqual(expected_result, str(profile))
 
     def test_profile_str_without_full_name(self):
         user = baker.make(User)
