@@ -1,7 +1,6 @@
-from datetime import datetime
-
 from django.forms import ValidationError
 from django.test import TestCase
+from django.utils import timezone
 
 from common.models import TimeStampedModel
 
@@ -13,7 +12,8 @@ class MeetingModelTest(TestCase):
         meeting_data = {
             "title": "67º Encontro do PUG-PE",
             "description": "PugPE",
-            "date": datetime.now(),
+            "start_date": timezone.now(),
+            "end_date": timezone.now(),
             "is_online": True,
             "is_draft": True,
         }
@@ -38,7 +38,8 @@ class MeetingModelTest(TestCase):
         meeting_data = {
             "title": "67º Encontro do PUG-PE",
             "description": "PugPE",
-            "date": datetime.now(),
+            "start_date": timezone.now(),
+            "end_date": timezone.now(),
             "is_online": True,
             "is_draft": True,
         }
@@ -51,7 +52,8 @@ class MeetingModelTest(TestCase):
         meeting_data = {
             "title": "",
             "description": "PugPE",
-            "date": datetime.now(),
+            "start_date": timezone.now(),
+            "end_date": timezone.now(),
             "is_online": True,
             "is_draft": True,
         }
@@ -67,7 +69,8 @@ class MeetingModelTest(TestCase):
         meeting_data = {
             "title": "67º Encontro do PUG-PE",
             "description": "PugPE",
-            "date": None,
+            "start_date": None,
+            "end_date": None,
             "is_online": True,
             "is_draft": True,
         }

@@ -27,7 +27,7 @@ class Profile(TimeStampedModel):
         if len(splitted_name) >= 2:
             first_name = splitted_name[0]
             last_name = splitted_name[-1]
-            return first_name + " " + last_name
+            return first_name + " " + last_name + " - " + self.user.email
 
         first_name = splitted_name[0]
-        return first_name
+        return first_name + " - " + self.user.email

@@ -9,7 +9,8 @@ def check_required_fields_for_a_valid_event(event):
     required_fields = {
         "title": str,
         "description": str,
-        "date": datetime,
+        "start_date": datetime,
+        "end_date": datetime,
     }
 
     for field in required_fields:
